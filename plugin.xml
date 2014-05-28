@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="org.michaelgorski.cordova.AppVersion"
+  version="1.0.0">
+  
+  <name>AppVersion</name>
+
+  <description>Get the app version of a cordova application.</description>
+
+  <license>Apache 2.0 License</license>
+
+  <js-module src="www/appVersion.js" name="AppVersion">
+        <clobbers target="AppVersion" />
+  </js-module>
+
+  <engines>
+      <engine name="cordova" version=">=3.0.0" />
+  </engines>
+  
+  <!-- android -->
+  <platform name="android">
+    <!-- android specific elements -->
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="AppVersion">
+        <param name="android-package" value="org.michaelgorski.cordova.AppVersion" />
+       </feature>
+    </config-file>
+    
+    <source-file src="src/android/AppVersion.java" target-dir="src/org/michaelgorski/cordova" />
+  </platform>
+  
+  <!-- ios -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="AppVersion">
+          <param name="ios-package" value="AppVersion"/>
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/AppVersion.h" />
+    <source-file src="src/ios/AppVersion.m" />
+  </platform>
+</plugin>
