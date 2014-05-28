@@ -1,7 +1,7 @@
 AppVersion
 ==========
 
-Get the app version of a cordova application
+Get the app version of a cordova application. Note that it shows the app version which is present to the user not the build version which is only for internal use.
 
 
 ### Installing the plugin to your project
