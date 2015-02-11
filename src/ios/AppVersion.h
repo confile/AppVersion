@@ -10,4 +10,6 @@
 
 - (void) getVersionNumber:(CDVInvokedUrlCommand*)command;
 
+- (void) getBuildNumber:(CDVInvokedUrlCommand*)command;
+
 @end
