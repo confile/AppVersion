@@ -4,6 +4,7 @@
 */
 
 #import <Cordova/CDV.h>
+#import "AssetsLibrary/AssetsLibrary.h"
 #import "AppVersion.h"
 
 
@@ -28,6 +29,23 @@
 
 	[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
+
+- (void) geAlbumPermission:(CDVInvokedUrlCommand*)command
+{
+	CDVPluginResult* pluginResult = nil;
+        ALAuthorizationStatus status = [ALAssetsLibrary authorizationStatus];
+	
+	NSString* permission = @"1";
+	if (status != ALAuthorizationStatusAuthorized) {
+           version = @"0";
+        }
+	
+	
+	pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:permission];
+	
+	[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
 
 
 @end
