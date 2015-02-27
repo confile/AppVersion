@@ -37,7 +37,7 @@
 	
 	NSString* permission = @"1";
 	if (status != ALAuthorizationStatusAuthorized) {
-           version = @"0";
+           permission = @"0";
         }
 	
 	
