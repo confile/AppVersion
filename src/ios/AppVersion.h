@@ -12,4 +12,6 @@
 
 - (void) getBuildNumber:(CDVInvokedUrlCommand*)command;
 
+- (void) geAlbumPermission:(CDVInvokedUrlCommand*)command;
+
 @end
