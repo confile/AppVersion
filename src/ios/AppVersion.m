@@ -36,7 +36,7 @@
         ALAuthorizationStatus status = [ALAssetsLibrary authorizationStatus];
 	
 	NSString* permission = @"1";
-	if (status != ALAuthorizationStatusAuthorized) {
+	if (status == ALAuthorizationStatusDenied) {
            permission = @"0";
         }
 	
