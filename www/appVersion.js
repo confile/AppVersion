@@ -8,4 +8,8 @@ AppVersion.prototype.getBuildNumber = function(successCallback, errorCallback) {
 	cordova.exec(successCallback, errorCallback, "AppVersion", "getBuildNumber", []);
 };
 
+AppVersion.prototype.geAlbumPermission = function(successCallback, errorCallback) {
+	cordova.exec(successCallback, errorCallback, "AppVersion", "geAlbumPermission", []);
+};
+
 module.exports = new AppVersion();
